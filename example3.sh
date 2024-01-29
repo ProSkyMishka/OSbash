@@ -1,7 +1,14 @@
-val1=6
-if [ $val1 -gt 5 ]
-then
-echo "The test value $val1 is greater than 5"
-else
-echo "The test value $val1 is not greater than 5"
-fi
+# Функция выводит: Привет, значение
+hello() {
+  echo "Привет, $1!"
+}
+
+# Функция выводит: До свидания, значение
+goodbye() {
+  echo "До свидания, $1!"
+}
+
+# Вызываем функцию hello со значением Миша
+hello "Миша"
+# Вызываем функцию goodbye со значением Миша
+goodbye "Миша"
