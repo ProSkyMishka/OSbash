@@ -1,12 +1,18 @@
-i=0
+# Просит ввесть пароль, покв он не подойдет
 
-while [ $i -lt 5 ]
+# Пароль
+password="qwerty"
+# Пароль введенный пользователем
+user_input=""
+
+# Цикл выполняется пока не подойдет пароль
+while [ "$user_input" != "$password" ]
 do
-  ((i++))
-  if [[ "$i" == '2' ]]; then
-    continue
-  fi
-  echo "Number: $i"
+# Считывает пароль введенный пользователем
+  read -p "Enter the password: " user_input
+# Выводит, что пароль неверный
+  echo "Wrong password, login denied"
 done
 
-echo 'All Done!'
+# Выводит, что пароль верен
+echo "Password accepted, login allowed"
