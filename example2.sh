@@ -1,10 +1,11 @@
-password="14pomTEr"
-user_input=""
+# Счетчик
+counter=1
 
-while [ "$user_input" != "$password" ]
+# Пока счетчик меньше или равен 5
+while [ $counter -le 5 ]
 do
-  read -p "Enter the password: " user_input
-  echo "Wrong password, login denied"
+# Выводим счетчик
+  echo $counter
+# Увеличиваем счетчик
+  ((counter++))
 done
-
-echo "Password accepted, login allowed"
